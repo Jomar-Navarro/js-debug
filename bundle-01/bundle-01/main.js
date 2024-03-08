@@ -77,12 +77,12 @@ loopToFive();
 function displayEvenNumbers() {
     let numbers = [1, 2, 3, 4, 5, 6, 7, 8];
     let evenNumbers = [];
-    for (let i = 0; i < numbers.length - 1; i++;) { // Un punto e virgola in piú; {Errore di sintassi} // numbers.lenght non deve avere - 1 perché se no non restituirebbe i numeri pari; {Errore di logica}
-        if (numbers % 2 = 0); { // "=" sintassi sbagliato servono due o tre uguali ---> "==="; {Errore di sintassi} //numbers é sbagliato perché non dobbiamo prendere il contenuto dell'array e non il singolo numero {Errore di logica}
-            evenNumbers.push(i); // É sbagliata perché mi ritornerebbero i numeri dispari e non uguali. {Errore di logica}
+    for (let i = 0; i < numbers.length - 1; i++;) { // 1. Un punto e virgola in piú; {Errore di sintassi} // 2. numbers.lenght non deve avere - 1 perché se no non restituirebbe i numeri pari; {Errore di logica}
+        if (numbers % 2 = 0); { //3. "=" sintassi sbagliato servono due o tre uguali ---> "==="; {Errore di sintassi} //4. numbers é sbagliato perché non dobbiamo prendere il contenuto dell'array e non il singolo numero {Errore di logica}
+            evenNumbers.push(i); //5.  É sbagliata perché mi ritornerebbero i numeri dispari e non uguali. {Errore di logica}
             console.log(i);
         }
-        return evenNumbers; // Il return é nella posizione sbagliata perché non dovrebbe essere all'interno della condizione, ma dovrebbe essere fuori ma sempre all'interno delle funzione
+        return evenNumbers; //6.  Il return é nella posizione sbagliata perché non dovrebbe essere all'interno della condizione, ma dovrebbe essere fuori ma sempre all'interno delle funzione
     }
 }
 displayEvenNumbers(); // dovrebbe restituire [2,4,6,8]
