@@ -85,7 +85,7 @@ addNumbers();
 
 /*
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-1. Questa é una funzioone che con un promt mi chiede un numero e lo stampa in console
+1. Questa é una funzione che con un promt mi chiede un numero e lo stampa in console
 2. L'errore qua é nella variabile, perché il valore assegnato viene rilevato come una stringa e non come un numero. Quindi mi concatenava il numero che assegna l'utente con il "total". La correzione giusta é aggiugere un parsseInt.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 */
@@ -110,46 +110,84 @@ function checkAccess() {
 }
 checkAccess();
 
+// Correzione
+function checkAccess() {
+    const addresses = ['mymail@mail.com', 'yourmail@mail.com', 'hermail@mail.com', 'hismail@mail.com'];
+    const userEmail = prompt('Inserisci il tuo indirizzo email');
+
+    let grantAccess = false;
+
+    if (addresses.includes(userEmail)) {
+        grantAccess = true;
+    }
+
+    if (grantAccess === true) {
+        console.log('Accesso consentito!');
+    } else {
+        console.log('Accesso negato!');
+    }
+}
+checkAccess();
+
 /*
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-1. 
-2. 
+1. Una funzione che mi verifica se l'indirizzo email che chiede all'utente sia all'interno del "database". Se non é incluso da accesso negato se no consente l'accesso;
+2. L'errore in questo codice é un errore logico, perché nella variabile "grandAccess" é inizializzato come una stringa e non come un booleano. Questo di conseguenza da un problema logico al codice. Stesso cosa nell'istruzione di condizione sempre nel "grantAccess".
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 */
 
 
 // ESERCIZIO 5 (suggerimento: c'è un solo errore)
-// function checkAccessImproved() {
-//     const addresses = ['mymail@mail.com', 'yourmail@mail.com', 'hermail@mail.com', 'hismail@mail.com'];
+function checkAccessImproved() {
+    const addresses = ['mymail@mail.com', 'yourmail@mail.com', 'hermail@mail.com', 'hismail@mail.com']; 
+    const userEmail = prompt('Inserisci il tuo indirizzo email');   
+    let grantAccess = 'false';  
+    for (let i = 0; i < addresses.length; i++) {
+        const email = addresses[i]; 
+        if (userEmail.length > 5) { 
+            if (email === userEmail) {
+                grantAccess = 'true';   
+            }   
+        }   
+        if (grantAccess) {
+            console.log('Accesso consentito!');
+        } else {
+            console.log('Accesso negato!');
+        }
+    }   
+    checkAccessImproved();
 
-//     const userEmail = prompt('Inserisci il tuo indirizzo email');
+// Correzione
+function checkAccessImproved() {
+    const addresses = ['mymail@mail.com', 'yourmail@mail.com', 'hermail@mail.com', 'hismail@mail.com'];
+    const userEmail = prompt('Inserisci il tuo indirizzo email');
 
-//     let grantAccess = 'false';
+    let grantAccess = 'false';
 
-//     for (let i = 0; i < addresses.length; i++) {
-//         const email = addresses[i];
+    for (let i = 0; i < addresses.length; i++) {
+        const email = addresses[i];
 
-//         if (userEmail.length > 5) {
+        if (userEmail.length > 5) {
 
-//             if (email === userEmail) {
-//                 grantAccess = 'true';
+            if (email === userEmail) {
+                grantAccess = 'true';
 
-//             }
+            }
 
-//         }
+        }
 
-//         if (grantAccess) {
-//             console.log('Accesso consentito!');
-//         } else {
-//             console.log('Accesso negato!');
-//         }
-//     }
-// }
-//     checkAccessImproved();
+        if (grantAccess) {
+            console.log('Accesso consentito!');
+        } else {
+            console.log('Accesso negato!');
+        }
+    }
+}
+    checkAccessImproved();
 
 /*
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-1. 
-2. 
+1. Questo come l'esercizio precedente chiede l'accesso se l'email é all'interno del "Database"
+2. Qua l'errore stava nella chiusura della funzione. La funzione non é stata chiusa correttamente
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 */
