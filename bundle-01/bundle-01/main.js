@@ -23,7 +23,7 @@ for (let i = 0; i < 5; i++) {
 /*
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 1.  Questa linea di codice é un ciclo che itera un numero fino a 5;
-2.  C'é un errore di logica e non di sintassi, specificatamente in i > 5, perché il ciclo non sará mai vera perché la i é inizializzata a i = 0. Dunque la logica corretta sarebbe i < 5
+2.  C'é un errore di sintassi e non di logica, specificatamente in i > 5, perché il ciclo non sará mai vera perché la i é inizializzata a i = 0. Dunque la logica corretta sarebbe i < 5
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 */
 
