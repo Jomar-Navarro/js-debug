@@ -64,7 +64,7 @@ function loopToFive() {
         console.log(i);
     }
 }
-
+loopToFive()
 /*
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 1. Questo codice come l'esercizio 1 é un ciclo for che itera un numero fino a 5;
