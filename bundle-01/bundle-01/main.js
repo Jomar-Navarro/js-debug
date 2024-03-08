@@ -11,9 +11,9 @@
 
 
 // ESERCIZIO 1
-for (let i = 0; i > 5; i++) {
-    console.log(i);
-}
+// for (let i = 0; i > 5; i++) {
+//     console.log(i);
+// }
 
 // Correzione
 for (let i = 0; i < 5; i++) {
@@ -28,12 +28,12 @@ for (let i = 0; i < 5; i++) {
 */
 
 // ESERCIZIO 2
-function addIfEven(num) {
-    if (num % 2 = 0) {
-        return num + 5;
-    }
-    return num;
-}
+// function addIfEven(num) {
+//     if (num % 2 = 0) {
+//         return num + 5;
+//     }
+//     return num;
+// }
 
 // Correzione
 function addIfEven(num) {
@@ -52,22 +52,56 @@ function addIfEven(num) {
 
 
 // ESERCIZIO 3
+// function loopToFive() {
+//     for (let i = 0, i < 5, i++) {
+//         console.log(i);
+//     }
+// }
+
+// Correzione
 function loopToFive() {
-    for (let i = 0, i < 5, i++) {
+    for (let i = 0; i < 5; i++) {
         console.log(i);
     }
 }
 
+/*
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+1. Questo codice come l'esercizio 1 é un ciclo for che itera un numero fino a 5;
+2. Qua invece c'é un errore di sintassi e non logica, perché al posto della virgola "," dopo i = 0 e dopo i < 5, bisogna mettere un punto e virgola ";"
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+*/
 
-// ESERCIZIO 4 (suggerimento: ci sono 7 errori)
+
+// // ESERCIZIO 4 (suggerimento: ci sono 7 errori)
+// // function displayEvenNumbers() {
+// //     let numbers = [1, 2, 3, 4, 5, 6, 7, 8];
+// //     let evenNumbers = [];
+// //     for (let i = 0; i < numbers.length - 1; i++;) {
+// //         if (numbers % 2 = 0); {
+// //             evenNumbers.push(i);
+// //         }
+// //         return evenNumbers;
+// //     }
+// // }
+// displayEvenNumbers(); // dovrebbe restituire [2,4,6,8]
+
 function displayEvenNumbers() {
     let numbers = [1, 2, 3, 4, 5, 6, 7, 8];
     let evenNumbers = [];
-    for (let i = 0; i < numbers.length - 1; i++;) {
-        if (numbers % 2 = 0); {
-            evenNumbers.push(i);
+    for (let i = 0; i < numbers.length; i++) {
+        if (numbers[i] % 2 === 0) {
+            evenNumbers.push(numbers[i]);
+            console.log(evenNumbers);
         }
-        return evenNumbers;
     }
+    return evenNumbers;
 }
-displayEvenNumbers(); // dovrebbe restituire [2,4,6,8]
+
+displayEvenNumbers();
+/*
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+1. Questo codice é una funzione con all'interno un'istruzione condizionale
+2. In questo codice a differenza degli altri ha diversi errori di sintassi e logica;
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+*/
