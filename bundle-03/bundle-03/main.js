@@ -149,14 +149,14 @@ const cars = [
     },
 ];
 
-const gasolineCars = cars.filter( (auto) => auto.type === 'benzina'); // Errore di sintassi >= 
+const gasolineCars = cars.filter( auto => auto.type.toLowerCase() === 'benzina'); // Errore di sintassi >= 
 
-const dieselCars = cars.filter( (auto) => {
-    auto.type === 'diesel';
+const dieselCars = cars.filter( auto => {
+    auto.type.toLowerCase() === 'diesel';
 });
 
-const otherCars = cars.filter( (auto) => {
-    return auto.type !== 'benzina' || auto.type !== 'diesel';
+const otherCars = cars.filter( auto => {
+    return auto.type.toLowerCase !== 'benzina' && auto.type.toLowerCase() !== 'diesel';
 });
 
 console.log('Auto a benzina');
